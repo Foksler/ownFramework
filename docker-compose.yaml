@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    php-nginx-dev:
+        container_name: ownFramework
+        image: webdevops/php-nginx-dev:7.4
+        ports: 
+            - "80:80"
+        volumes:
+            - ./framework:/app
+            - ./nginx/config/default.conf:/opt/docker/etc/nginx/main.conf
+        # enviroment:
+        #     PHP_DISPLAY_ERRORS: 1
