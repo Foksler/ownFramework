@@ -1,23 +1,18 @@
 <?php
 
+use App\Calendar\Controller\LeapYearController;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
 $routes = new RouteCollection();
-//$routes->add('hello', new Route('/hello/{name}', [
-//    'name' => 'World',
-//    '_controller' => 'render_template',
-//]));
 
 $routes->add('bye', new Route('/bye', [
     '_controller' => 'render_template',
 ]));
 
-$routes->add('hello', new Route('/hello/{name}', [
-    //'name' => 'World',
-    '_controller' => function ($request) {
-        return render_template($request);
-    }
+$routes->add('leap_year', new Route('/is_leap_year/{year}', [
+    'year' => null,
+    '_controller' => [new LeapYearController(), 'index'],
 ]));
-//var_dump($request);
+
 return $routes;
