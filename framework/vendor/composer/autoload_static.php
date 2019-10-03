@@ -140,6 +140,7 @@ class ComposerStaticInit222b8b96525a38bf4942cbdd97f7d9e8
         'App\\Calendar\\Controller\\LeapYearController' => __DIR__ . '/../..' . '/src/Calendar/Controller/LeapYearController.php',
         'App\\Calendar\\Model\\LeapYear' => __DIR__ . '/../..' . '/src/Calendar/Model/LeapYear.php',
         'App\\Simplex\\Framework' => __DIR__ . '/../..' . '/src/Simplex/Framework.php',
+        'App\\Simplex\\ResponseEvent' => __DIR__ . '/../..' . '/src/Simplex/ResponseEvent.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
