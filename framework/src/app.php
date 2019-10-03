@@ -12,7 +12,7 @@ $routes->add('bye', new Route('/bye', [
 
 $routes->add('leap_year', new Route('/is_leap_year/{year}', [
     'year' => null,
-    '_controller' => [new LeapYearController(), 'index'],
+    '_controller' => 'App\Calendar\Controller\LeapYearController::index',
 ]));
 
 return $routes;

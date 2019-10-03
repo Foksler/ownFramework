@@ -9,6 +9,7 @@ return array(
     'App\\Calendar\\Controller\\LeapYearController' => $baseDir . '/src/Calendar/Controller/LeapYearController.php',
     'App\\Calendar\\Model\\LeapYear' => $baseDir . '/src/Calendar/Model/LeapYear.php',
     'App\\Simplex\\Framework' => $baseDir . '/src/Simplex/Framework.php',
+    'App\\Simplex\\ResponseEvent' => $baseDir . '/src/Simplex/ResponseEvent.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
