@@ -3,6 +3,9 @@
 namespace App\Simplex;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
+//use App\Simplex\ResponseEvent;
+use Symfony\Component\HttpKernel\Event\ViewEvent;
 
 class GoogleListener implements EventSubscriberInterface
 {
@@ -11,7 +14,7 @@ class GoogleListener implements EventSubscriberInterface
      */
     public static function getSubscribedEvents(): array
     {
-        return ['response' => 'onResponse'];
+        return ['kernel.response' => 'onResponse'];
     }
 
     /**
@@ -19,6 +22,7 @@ class GoogleListener implements EventSubscriberInterface
      */
     public function onResponse(ResponseEvent $event)
     {
+//        $response = $event->getControllerResult();
         $response = $event->getResponse();
 
         if ($response->isRedirection()
