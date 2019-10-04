@@ -8,6 +8,8 @@ use App\Simplex\GoogleListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
+use Symfony\Component\HttpKernel\HttpCache\HttpCache;
+use Symfony\Component\HttpKernel\HttpCache\Store;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\Routing;
 
@@ -27,6 +29,9 @@ $controllerResolver = new ControllerResolver();
 $argumentResolver = new ArgumentResolver();
 
 $framework = new Framework($dispatcher, $matcher, $controllerResolver, $argumentResolver);
-$response = $framework->handle($request);
-var_dump($response);
-$response->send();
+$framework = new HttpCache(
+    $framework,
+    new Store(__DIR__.'/../cache')
+);
+
+$framework->handle($request)->send();
